@@ -12,18 +12,13 @@ como disse antes, eu crio esse aplicativos para facilitar a vida das pessoas.
 
 Seguimos com o tutorial, apesar de não precisar, rs.-----------------------------------
 
-- Primeiramente, abra o arquivo "run.bat"
+- Primeiramente, entre na pasta resources e instale o python na sua máquina.
+Recomendo que reinicie seu PC depois disso.
 
-- Ele vai perguntar se você tem o python instalado ou atualizado, de qualquer forma,
-aperte "y" e depois "enter" para que você possa instalar/atualizar o seu python.
+- Abra o main.exe
 
-- Depois, ele vai instalar as bibliotecas necessárias para que o aplicativo funcione
-corretamente.
+- Escolha clique na primeira opção de instalar as bibliotecas necessárias.
 
-- Depois disso, o programa irá abrir, então, você selecionará o vídeo com a extensão .MP4
-(lembrando, o vídeo DEVE ser .MP4, senão, ele dará problema)
+- Selecione o vídeo
 
-- Depois de selecionar o arquivo, selecione a pasta onde você quer exportar e, por fim, 
-selecione a opção desejada.
-
-Descansem e bom trabalho!
+- Selecione a opção desejada.
