@@ -5,9 +5,6 @@
 
 from multiprocessing import Process, freeze_support
 import tkinter as tk
-from tkinter import Tk
-from tkinter.filedialog import askopenfilename
-from tkinter import messagebox
 import sys
 import os
 import subprocess
@@ -91,7 +88,7 @@ def selecionar_arquivo():
         print("O arquivo deve ter a extensão .mp4")
         return
 
-    messagebox.showinfo("Parabuains", "Arquivo selecionado!")
+    tk.messagebox.showinfo("Parabuains", "Arquivo selecionado!")
 
     # Armazena o caminho do arquivo
     global caminho_arquivo
@@ -103,12 +100,12 @@ def exportar():
     if caminho_arquivo is None:
         print("Selecione um arquivo primeiro")
         # Exibe uma caixa de aviso
-        messagebox.showinfo("Aviso", "Selecione um arquivo primeiro")
+        tk.messagebox.showinfo("Aviso", "Selecione um arquivo primeiro")
         return
 
     # Exibe um prompt para solicitar o destino de exportação
     folder_path = tk.filedialog.askdirectory()
-    messagebox.showinfo("Parabuains", "Pasta selecionada!")
+    tk.messagebox.showinfo("Parabuains", "Pasta selecionada!")
 
     # Realiza a exportação
 
@@ -122,7 +119,7 @@ def rodar():
         ["auto-editor", caminho_arquivo, "--export", "premiere", "--margin", "0.1sec"],
         shell=False,
     )
-    messagebox.showinfo(
+    tk.messagebox.showinfo(
         "Parabéns", "Exportação para o Premiere ou Sony Vegas concluída"
     )
 
@@ -133,7 +130,7 @@ def bruto():
         return
 
     subprocess.run(["auto-editor", caminho_arquivo])
-    messagebox.showinfo("Parabéns", "Exportação concluída")
+    tk.messagebox.showinfo("Parabéns", "Exportação concluída")
 
 
 def vinci():
@@ -142,10 +139,8 @@ def vinci():
         return
 
     subprocess.run(["auto-editor", caminho_arquivo, "--export", "resolve"])
-    messagebox.showinfo("Parabéns", "Exportação concluída")
+    tk.messagebox.showinfo("Parabéns", "Exportação concluída")
 
 
 if __name__ == "__main__":
     main()
-
-# comando utilizado pyinstaller --onefile c:/Users/USER/Desktop/auto-editor.py
