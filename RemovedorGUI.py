@@ -30,50 +30,54 @@ def main():
     # Cria uma janela do Tkinter
     root = tk.Tk()
     root.title("Removedor de silêncio")
-    root.geometry(f"{500}x{300}")
+    root.geometry(f"{480}x{450}")
     root.resizable(False, False)
 
+    # Cria um label dizendo para selecionar o caminho do arquivo
+    label_arquivo = tk.Label(root, text="Escolha um arquivo no formato MP4:")
+    label_arquivo.grid(row=0, column=0, padx=10, pady=10, sticky="W")
     # Cria um botão para selecionar o arquivo
     button_selecionar = tk.Button(
         root, text="1º Selecionar arquivo", command=selecionar_arquivo
     )
-    button_selecionar.grid(row=0, column=0, sticky="W" + "E")
-    # Cria um label para mostrar o caminho do arquivo
-    label_arquivo = tk.Label(root, text="O arquivo deve ser MP4")
-    label_arquivo.grid(row=1, column=0, sticky="W")
+    button_selecionar.grid(row=1, column=0, padx=10, pady=10)
 
+    # Cria um label dizendo para selecionar o caminho para exportar
+    label_destino = tk.Label(
+        root,
+        text="Escolha uma pasta para exportar o arquivo: *pode ser qualquer pasta.",
+    )
+    label_destino.grid(row=2, column=0, padx=10, pady=10, sticky="W")
     # Cria um botão para exportar o arquivo
     button_exportar = tk.Button(
         root, text="2º Selecionar a pasta para exportar", command=exportar
     )
-    button_exportar.grid(row=2, column=0, sticky="W" + "E")
-    # Cria um label para mostrar o caminho do exportar
-    label_exportar = tk.Label(
-        root, text="Escolha a pasta para exportar o arquivo, pode ser qualquer uma"
-    )
-    label_exportar.grid(row=3, column=0, sticky="W")
+    button_exportar.grid(row=3, column=0, padx=10, pady=10)
 
+    # Cria um label dizendo
+    label_exportar = tk.Label(root, text="Escolha uma das opções para exportar:")
+    label_exportar.grid(row=4, column=0, padx=10, pady=10, sticky="W")
     # Cria um botão para rodar o script
     button_run = tk.Button(
         root,
         text="Tirar silêncio e exportar para Adobe Premiere ou Sony Vegas",
         command=rodar,
     )
-    button_run.grid(row=4, column=0, sticky="W" + "E")
+    button_run.grid(row=5, column=0, padx=10, pady=10)
 
     # Cria um botão para rodar o script bruto
     button_run = tk.Button(root, text="Tirar silêncio e exportar bruto", command=bruto)
-    button_run.grid(row=6, column=0, sticky="W" + "E")
+    button_run.grid(row=6, column=0, padx=10, pady=10)
 
     # Cria um botão para rodar o script Da vinci
     button_run = tk.Button(
         root, text="Tirar silêncio e exportar para DaVinci Resolve", command=vinci
     )
-    button_run.grid(row=5, column=0, sticky="W" + "E")
+    button_run.grid(row=7, column=0, padx=10, pady=10)
 
     # Cria um label para mostrar o caminho do arquivo
     label_arquivo = tk.Label(root, text="Criado e desenvolvido por @wilkenfilho")
-    label_arquivo.grid(row=7, column=0, sticky="W")
+    label_arquivo.grid(row=8, column=0, padx=10, pady=10, sticky="W")
 
     # Inicia o loop principal do Tkinter
     root.mainloop()
