@@ -30,7 +30,7 @@ def main():
     # Cria uma janela do Tkinter
     root = tk.Tk()
     root.title("Removedor de silêncio")
-    root.geometry(f"{350}x{200}")
+    root.geometry(f"{500}x{300}")
     root.resizable(False, False)
 
     # Cria um botão para selecionar o arquivo
