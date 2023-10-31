@@ -3,8 +3,8 @@
 # Nesse caso, utilize o comando no CMD pip install auto-editor e o comando pip install tk
 
 
-from multiprocessing import Process, freeze_support
 import tkinter as tk
+from tkinter import filedialog
 import sys
 import os
 import subprocess
@@ -81,7 +81,7 @@ def main():
 
 def selecionar_arquivo():
     # Abre uma caixa de diálogo para selecionar o arquivo
-    filename = tk.filedialog.askopenfilename(filetypes=[("Arquivos MP4", "*.mp4")])
+    filename = filedialog.askopenfilename(filetypes=[("Arquivos MP4", "*.mp4")])
 
     # Verifica se o arquivo é válido
     if not filename.endswith(".mp4"):
@@ -104,7 +104,7 @@ def exportar():
         return
 
     # Exibe um prompt para solicitar o destino de exportação
-    folder_path = tk.filedialog.askdirectory()
+    folder_path = filedialog.askdirectory()
     tk.messagebox.showinfo("Parabuains", "Pasta selecionada!")
 
     # Realiza a exportação
